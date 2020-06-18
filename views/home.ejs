@@ -1,11 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<h1>TO Do List</h1>
-</body>
-</html>
+<script src="https://kit.fontawesome.com/7cfd8dc30b.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="/css/homestyle.css">
+ <section id="container">
+     <h1 id="first-heading">TODO  App</h1>
+        <div id="description">
+            <p>DESCRIPTION</p>
+            
+            <form action="/create-task" id="input-form"  method="POST">
+        <input id="input-description" type="text" name="description" placeholder="What do you need to do?" required>
+        </div>
+
+        <div id="category-date-container">
+            <div id="category-container" class="inline-block">
+                <p class="white font-1000">CATEGORY</p>
+    
+                <select name="category" id="category-options" required>
+                    <option value="Home">Home</option>
+                    <option value="School">School</option>
+                    <option value="Game">Game</option>
+                    <option value="Work">Work</option>
+                    <option value="Clean">Clean</option>
+                    <option value="Hospital">Hospital</option>
+                </select>
+            
+            </div>
+            <div id="date-container" class="inline-block">
+                <p class="white font-1000"> DUE DATE</p>
+            
+                <input type="date" id="duedate" name="duedate" required>
+                
+            </div>
+        </form>
+        </div>
+        <div id="add-delete-container">
+            <div id="temp-container">
+            <button type="submit" value="ADD TASK" id="add-task-btn" form="input-form" ><span><i class="fa fa-plus" aria-hidden="true"></i> ADD TASK</span></button>
+            <button type="submit"  value="DELETE TASK" id="task-delte-btn" form="delete-form"><span class="reddish"><i class="fa fa-trash" aria-hidden="true"></i> DELETE TASK</span></button>
+            </div>
+             
+        </div>
+        <div id="all-tasks">
+            <form action="/delete/task" id="delete-form" method="POST">
+                <% for(let i of tasks){ %>
+                    
+                    <div id="tasks-container" style="background-color: lightblue;">
+                        <div id="checkbox-and-description">
+                        <input type="checkbox" class="" name="<%= i.id %>" id="task-checkbox">
+                        <div id="display-task"> 
+                            <div><p class="desc-font"><%= i.description%></p></div>
+                            <div><p class=""><span class="reddish desc-font"><i class="fa fa-calendar" aria-hidden="true"></i></span> 
+                                &nbsp; <span><%=i.duedate %></span></p></div>
+                            </div> 
+                        </div>
+                       
+                        
+                    <div class="desc-category">  <p class="cat-border" id="padding-2"> <span class="pad-5" ><%= i.category %> </span></p></div>
+                  
+                </div>
+                    
+                
+                    <% } %>
+            </form>
+        </div> 
+       
+ </section>
+ <section id="completed-task">
+<div><h1 class="align-center" id="history-heading">History</h1></div> 
+<div id="all-tasks" class="border-left-2">
+<form action="/delete/task" id="delete-form" method="POST">
+    <% for(let i of accomplishedTask){ %>
+        
+        <div id="tasks-container" style="background-color: lightblue;">
+            <div id="checkbox-and-description">
+            <input type="checkbox" class="" name="<%= i.id %>" id="task-checkbox" checked disabled>
+            <div id="display-task"> 
+                <div><p class="desc-font"><%= i.description%></p></div>
+                <div><p class=""><span class="reddish desc-font"><i class="fa fa-calendar" aria-hidden="true"></i></span> 
+                    &nbsp; <span><%=i.duedate %></span></p></div>
+                </div> 
+            </div>
+            
+            
+        <div class="desc-category">  <p class="cat-border" id="padding-2"> <span class="pad-5" ><%= i.category %> </span></p></div>
+        
+    </div>
+        
+    
+        <% } %>
+</form>
+</div> 
+</section>
+ <!-- <section id="completed-task">
+    <div><h1 class="align-center">Incomplete Task</h1></div>   
+    
+ </section> -->

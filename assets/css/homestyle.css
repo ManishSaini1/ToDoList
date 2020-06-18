@@ -1,0 +1,264 @@
+body
+{
+    margin: 0;
+    background: rgb(2,0,36);
+    background: repeating-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(10, 85, 55) 0%, rgb(4, 103, 122) 100%);
+    position: relative;
+    /* border: 2px solid indianred; */
+
+}
+ 
+/* M A I N    C O N T A I N E R */ 
+#container
+{
+    height:auto;
+    width: 50vw;
+    margin-top: 5vh;
+    margin-left: 25vw;
+    background-color: #242b3e;
+    position: absolute;
+}
+/* To Do heading */
+#first-heading
+{
+    margin: 0;
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 1000;
+    padding: 1rem;
+
+}
+/* this is th e onli styling file..and for the tasks that are enereed     ok */
+
+/* DESCRIPTION DIV */
+#description
+{
+    border-bottom: 1.5px solid white;
+    border-top: 1.5px solid white;
+    padding-bottom: 2%;
+}
+#description p
+{
+    font-weight: 1000;
+    color: white;
+    margin:2%;
+}
+#description input
+{
+    margin-left: 2%;   
+}
+#input-description
+{
+    width: 96%;
+    height: 10vh;
+    
+    font-size: 1.3rem;
+    padding-left: 2%;
+
+}
+/* CATEGORY -  DATE   */
+#category-date-container
+{
+    /* border: 2px solid white; */
+    width: 96%;
+    padding-right: 2%;
+    padding-left: 2%;
+    border-bottom: 1.5px solid white;
+   
+}
+#category-container
+{
+    width: 45%;
+    padding-right: 2%;
+    padding-bottom: 2%; 
+}
+#date-container
+{
+    width: 45%;
+    padding-left: 2%;
+    border-left: 1.5px solid white;
+    padding-bottom: 2%;
+    /* border: 2px solid pink; */
+    
+
+}
+#category-options
+{
+    width: 100%;
+    height: 5vh;
+    
+}
+#date
+{
+    width: 100%;
+    height: 15vh;
+    
+}
+
+ /* A D D   D E L E T E   C O N T A I N R */
+ #add-delete-container
+ {
+     text-align: center;
+     margin-top: 5%;
+     border-bottom: 2px solid white;
+     padding-bottom: 2%;
+ }
+ #add-task-btn
+ {
+     width: 20%;
+     height: 7vh;
+     font-weight: 800;
+     background-color: rgb(56, 205, 216);
+ }
+ /* see no need to restart sever for ejs changes and style  for css u need to restart no u didn't save file see*/ 
+ #task-delte-btn
+ {
+    width: 20%;
+    height: 7vh;
+    font-weight: 800;
+    background-color: rgb(56, 205, 216);
+ }
+
+ /* D I S P L A Y   T A S K */
+ #history-heading
+ {
+     /* border-bottom: 2px solid white; */
+     color: gold;
+     font-size: 2rem;
+     padding: 0;
+     margin: 0;
+ }
+ #all-tasks
+ {
+     padding-left: 2%;
+     padding-right: 2%;
+     margin-top: 2%;
+     
+ }
+ #display-task
+ {
+     /* display: flex; */
+     /* flex-flow: wrap; */
+     margin-left: 3%;
+     /* overflow: hidden; */
+     /* border: 3px solid darkblue; */
+     /* max-height: 80%; */
+ }
+ #tasks-container
+ {
+     display: flex;
+     flex-flow: row;
+     margin-top: 2%;
+     margin-bottom: 2%;
+     justify-content: space-between;
+     /* border: 3px solid darkblue; */
+ }
+ #checkbox-and-description
+ {
+     display: inline-flex;
+     /* display: flex;
+     flex-flow: row;
+     justify-content: space-between;
+      */
+      /* border: 1px solid darkgoldenrod; */
+     min-width: 75%; 
+     
+ }
+ #task-checkbox
+{
+    margin-top: 4vh;
+}
+.desc-category
+{
+        /* border: 2px solid pink; */
+        height: 100%;
+        width: 8vw;
+        margin-right: 2vh;
+        /* background-color: chartreuse; */
+    
+}
+ .cat-border
+ {
+    font-size: 1rem;
+        
+    /* padding: 10%; */
+    color: white;
+    background-color: rgb(50, 68, 150);
+    border: 2px solid rgb(4, 13, 53);
+    
+ 
+ }
+
+ /* C O M P L E T E D     T A S K    C O N T A I N E R */
+ #completed-task
+ {
+     height: auto;
+     margin-top: 5vh;
+     width: 22vw;
+     /* border: 5px solid darkgoldenrod; */
+ }
+ #completed-task
+ {
+    height: 100%;
+    width: 20vw;
+    margin-top: 5vh;
+   
+    /* border: 5px solid darkred; */
+    
+    float: right ;
+    position: initial;
+    overflow-y: scroll;
+ }
+
+/* U T I L I T I E S  where is the div for task*/
+.border-left-2
+{
+    
+    border-left: 2px solid white;
+    border-bottom: 5px solid white;
+    border-top: 2px solid white;
+    
+}
+
+#padding-2
+{
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 0.4%;
+    padding-top: 0.4%;
+}
+.float-right
+{
+    float: right;
+}
+.align-center
+{
+    text-align: center;
+}
+.inline-block
+{
+    display: inline-block;
+}
+.white
+{
+    color: white;
+}
+.font-1000
+{
+    font-weight: 1000;
+}
+.pad-5
+{
+    padding: 18%;
+
+}
+.desc-font
+{
+    font-size: 1rem;
+}
+.reddish
+{
+    color: rgb(207, 63, 87);
+    /* font-size: 1rem; */
+}
