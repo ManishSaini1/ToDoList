@@ -4,8 +4,7 @@ body
     background: rgb(2,0,36);
     background: repeating-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(10, 85, 55) 0%, rgb(4, 103, 122) 100%);
     position: relative;
-    /* border: 2px solid indianred; */
-
+ 
 }
  
 /* M A I N    C O N T A I N E R */ 
@@ -29,8 +28,7 @@ body
     padding: 1rem;
 
 }
-/* this is th e onli styling file..and for the tasks that are enereed     ok */
-
+ 
 /* DESCRIPTION DIV */
 #description
 {
@@ -60,7 +58,6 @@ body
 /* CATEGORY -  DATE   */
 #category-date-container
 {
-    /* border: 2px solid white; */
     width: 96%;
     padding-right: 2%;
     padding-left: 2%;
@@ -79,9 +76,6 @@ body
     padding-left: 2%;
     border-left: 1.5px solid white;
     padding-bottom: 2%;
-    /* border: 2px solid pink; */
-    
-
 }
 #category-options
 {
@@ -96,7 +90,7 @@ body
     
 }
 
- /* A D D   D E L E T E   C O N T A I N R */
+ /* A D D   D E L E T E     B U T T O N    C O N T A I N R */
  #add-delete-container
  {
      text-align: center;
@@ -110,8 +104,7 @@ body
      height: 7vh;
      font-weight: 800;
      background-color: rgb(56, 205, 216);
- }
- /* see no need to restart sever for ejs changes and style  for css u need to restart no u didn't save file see*/ 
+ } 
  #task-delte-btn
  {
     width: 20%;
@@ -123,12 +116,13 @@ body
  /* D I S P L A Y   T A S K */
  #history-heading
  {
-     /* border-bottom: 2px solid white; */
      color: gold;
      font-size: 2rem;
      padding: 0;
      margin: 0;
  }
+
+ /* D I S P L A Y     A L L   T A S K */
  #all-tasks
  {
      padding-left: 2%;
@@ -138,12 +132,7 @@ body
  }
  #display-task
  {
-     /* display: flex; */
-     /* flex-flow: wrap; */
      margin-left: 3%;
-     /* overflow: hidden; */
-     /* border: 3px solid darkblue; */
-     /* max-height: 80%; */
  }
  #tasks-container
  {
@@ -152,16 +141,10 @@ body
      margin-top: 2%;
      margin-bottom: 2%;
      justify-content: space-between;
-     /* border: 3px solid darkblue; */
  }
  #checkbox-and-description
  {
      display: inline-flex;
-     /* display: flex;
-     flex-flow: row;
-     justify-content: space-between;
-      */
-      /* border: 1px solid darkgoldenrod; */
      min-width: 75%; 
      
  }
@@ -171,18 +154,14 @@ body
 }
 .desc-category
 {
-        /* border: 2px solid pink; */
         height: 100%;
         width: 8vw;
         margin-right: 2vh;
-        /* background-color: chartreuse; */
-    
 }
+ /* C A T E G O R Y */
  .cat-border
  {
     font-size: 1rem;
-        
-    /* padding: 10%; */
     color: white;
     background-color: rgb(50, 68, 150);
     border: 2px solid rgb(4, 13, 53);
@@ -190,22 +169,12 @@ body
  
  }
 
- /* C O M P L E T E D     T A S K    C O N T A I N E R */
- #completed-task
- {
-     height: auto;
-     margin-top: 5vh;
-     width: 22vw;
-     /* border: 5px solid darkgoldenrod; */
- }
+ /* C O M P L E T E D     T A S K    C O N T A I N E R      DISPLAY ALL COMPLETED TASK */
  #completed-task
  {
     height: 100%;
     width: 20vw;
-    margin-top: 5vh;
-   
-    /* border: 5px solid darkred; */
-    
+    margin-top: 5vh; 
     float: right ;
     position: initial;
     overflow-y: scroll;
@@ -260,5 +229,5 @@ body
 .reddish
 {
     color: rgb(207, 63, 87);
-    /* font-size: 1rem; */
+    
 }

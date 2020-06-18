@@ -1,6 +1,6 @@
+//ROUTING FILE HANDLES ALL ROUTES MAIN ROUTER
 const express= require('express');
 const router=express.Router();
-const homeController= require('../controllers/home_controller');
 const createTaskController= require('../controllers/create-task');
 const deleteTaskController=require('../controllers/delete-task');
 const taskTo=require('../models/tasks');
@@ -12,7 +12,6 @@ router.get('/', async function(req,res)
     taskTo.find({}, function(error, t)
     {
     if(error){console.log("error  in finding task");  return res.redirect('/');}
-            // taskList.sort('-createdAt');
         return res.render('home', 
         {
             tasks :taskList,
@@ -23,7 +22,4 @@ router.get('/', async function(req,res)
 router.post('/create-task',createTaskController.createTask);
 router.post('/delete/task', deleteTaskController.deleteTask);
 module.exports=router;
-//see ur data ia going but not getting posted lets check ejs
-//see the work of form is to post data to server and this is prefect i am getting data
-//ejs file is just posting ..and performing ur function..lets check ur function
-//hey can u check the schema file..oky
+ 

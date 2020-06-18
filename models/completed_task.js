@@ -1,3 +1,4 @@
+// SCHEMA FOR COMPLETED TASKS
 const mongoose=require('mongoose');
 const incompleteTaskSchema=new mongoose.Schema(
     {
